@@ -104,7 +104,7 @@ async def about_command(c, m: Message):
     )
 
 
-@Client.on_message(filters.command("method") & filters.private)
+@Client.on_message(filters.command("z") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
     user_id = m.from_user.id
@@ -182,7 +182,7 @@ async def log_file(bot, message):
         await message.reply(str(e))
 
 
-@Client.on_message(filters.command("mdisk_api") & filters.private)
+@Client.on_message(filters.command("oo") & filters.private)
 @private_use
 async def mdisk_api_handler(bot, message: Message):
     user_id = message.from_user.id
@@ -204,7 +204,7 @@ async def shortener_api_handler(bot, m: Message):
     cmd = m.command
     if len(cmd) == 1:
         s = SHORTENER_API_MESSAGE.format(
-            base_site=user["base_site"], shortener_api=user["shortener_api"]
+            base_site=user["m"], shortener_api=user["shortener_api"]
         )
 
         return await m.reply(s)

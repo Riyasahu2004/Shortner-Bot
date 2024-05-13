@@ -48,9 +48,9 @@ ABOUT_TEXT = """
     
 `📝 Language:` [Python 3](https://www.python.org/)
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
-`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
-`🌐 Source Code:` [GitHub](https://github.com/kevinnadar22/URL-Shortener-V2/)
+`👨‍💻 Developer:` [Dev](t.me/sam_dude2)
+`📢 Support:` [Talk Bot](https://t.me/@RgLinks_com)
+`🌐 Server:` [Vps]
 """
 
 
@@ -91,7 +91,6 @@ Here is a list of the channels:
 HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
             InlineKeyboardButton("Batch", callback_data="cbatch_command"),
         ],
         [
