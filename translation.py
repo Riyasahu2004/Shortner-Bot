@@ -187,9 +187,11 @@ SHORTENER_API_MESSAGE = """To add or update your Shortner Website API,
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {base_site}
+⚠️ Note: If You Dont Have A Api Token Key, Then You Simply Click On Generate Api Token Key 👇
 
-To change your Shortener Website: /base_site
+https://rglinks.com/member/tools/api
+
+Current Website: {base_site}
 
 Current Shortener API: `{shortener_api}`"""
 
