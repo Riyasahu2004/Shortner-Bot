@@ -56,7 +56,7 @@ async def start(c: Client, m: Message):
         )
     new_user = await get_user(m.from_user.id)
     t = START_MESSAGE.format(
-        m.from_user.mention, new_user["base_site"]
+        m.from_user.mention, new_user["method"], new_user["base_site"]
     )
 
     if WELCOME_IMAGE:
