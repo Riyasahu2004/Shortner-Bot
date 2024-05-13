@@ -56,7 +56,7 @@ async def start(c: Client, m: Message):
         )
     new_user = await get_user(m.from_user.id)
     t = START_MESSAGE.format(
-        m.from_user.mention, new_user["method"], new_user["base_site"]
+        m.from_user.mention, new_user["base_site"]
     )
 
     if WELCOME_IMAGE:
@@ -104,7 +104,7 @@ async def about_command(c, m: Message):
     )
 
 
-@Client.on_message(filters.command("") & filters.private)
+@Client.on_message(filters.command("method") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
     user_id = m.from_user.id
@@ -115,7 +115,7 @@ async def method_handler(c: Client, m: Message):
         return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
     elif len(cmd) == 2:
         method = cmd[1]
-        if method not in []:
+        if method not in ["mdisk", "mdlink", "shortener"]:
             return await m.reply(METHOD_MESSAGE.format(method=user["method"]))
         await update_user_info(user_id, {"method": method})
         await m.reply(f"Method updated successfully to {method}")
