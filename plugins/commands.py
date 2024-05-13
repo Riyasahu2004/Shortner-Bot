@@ -204,7 +204,7 @@ async def shortener_api_handler(bot, m: Message):
     cmd = m.command
     if len(cmd) == 1:
         s = SHORTENER_API_MESSAGE.format(
-            base_site=user["m"], shortener_api=user["shortener_api"]
+            base_site=user["base_site"], shortener_api=user["shortener_api"]
         )
 
         return await m.reply(s)
@@ -310,7 +310,7 @@ async def banner_image_handler(bot, m: Message):
                 return await m.reply_text("Image URL is Invalid")
 
 
-@Client.on_message(filters.command("base_site") & filters.private)
+@Client.on_message(filters.command("b") & filters.private)
 @private_use
 async def base_site_handler(bot, m: Message):
     user_id = m.from_user.id
